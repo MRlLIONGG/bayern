@@ -1,0 +1,98 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #8b0000, #d32f2f);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  animation: fadeInDown 1s ease forwards;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px #00000088;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: rgba(0,0,0,0.25);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.intro p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  color: #ffeb3b;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #000000cc;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: #ffd54f;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  border-top: 2px solid rgba(255,255,255,0.3);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Simple fade-in animations */
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  main {
+    max-width: 90%;
+    padding: 1rem 1.2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
